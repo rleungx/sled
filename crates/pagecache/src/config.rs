@@ -94,6 +94,7 @@ unsafe impl Send for ConfigBuilder {}
 
 impl Default for ConfigBuilder {
     fn default() -> ConfigBuilder {
+        #[allow(dead_code)]
         static SALT_COUNTER: AtomicUsize = ATOMIC_USIZE_INIT;
 
         #[cfg(unix)]
